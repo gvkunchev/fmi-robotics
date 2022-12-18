@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #EFEFEF;
+}
+
+#video {
+    text-align: center;
+    margin: 10px auto;
+}
+
+#video img {
+    outline: 1px solid black;
+    box-shadow: 0 0 10px 1px black;
+    border-radius: 5px;
+}
+
+#controls {
+    position: relative;
+    width: 640px;
+    margin: 10px auto;
+}
+
+.arrow-button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    font-size: 150%;
+}
+
+.arrow-button.pressed {
+    background-color: #898989;
+}
+
+#button_up {
+    top: 0;
+    left: 300px;
+}
+
+#button_down {
+    top: 60px;
+    left: 300px;
+}
+
+#button_left {
+    top: 60px;
+    left: 240px;
+}
+
+#button_right {
+    top: 60px;
+    left: 360px;
+}
+
+#gear {
+    font-size: 150%;
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 5px;
+    width: 150px;
+}
+
+#distance-wrapper{
+    float: right;
+    font-size: 150%;
+}

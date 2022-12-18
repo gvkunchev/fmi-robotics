@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Raspberry Pi Car</title>
+    <link rel="icon" href="{% static 'pi-icon.ico' %}" type="image/png">
+    <link rel="stylesheet" href="{% static 'general.css' %}" />
+    <script src="{% static 'jquery-3.6.2.min.js' %}"></script>
+    <script src="{% static 'app.js' %}"></script>
+</head>
+<body>
+    <div id="video">
+        <img src="video" />
+    </div>
+    <div id="controls">
+        <input type="button" value="&uarr;" id="button_up" class="arrow-button"></button>
+        <input type="button" value="&darr;" id="button_down" class="arrow-button"></button>
+        <input type="button" value="&larr;" id="button_left" class="arrow-button"></button>
+        <input type="button" value="&rarr;" id="button_right" class="arrow-button"></button>
+        <select id="gear">
+            <option value="1" selected="selected">1st gear</option>
+            <option value="2">2nd gear</option>
+            <option value="3">3rd gear</option>
+            <option value="4">4th gear</option>
+        </select>
+        <div id="distance-wrapper">
+            Distance:
+            <span id="distance"></span>
+            cm
+        </div>
+    </div>
+</body>
+</html>
