@@ -2,6 +2,7 @@ from . import config
 from .components.engine import Engine
 from .components.transmission import Transmission
 from .components.wheel import Wheel
+from .components.periscope import Periscope
 from .components.hardware.distance_sensor import DistanceSensor
 
 
@@ -19,6 +20,12 @@ class Car:
         self._wheel = Wheel(port=config.WHEEL_PORT,
                             min=config.WHEEL_MIN,
                             max=config.WHEEL_MAX)
+        self._periscope = Periscope(pan_port=config.PAN_PORT,
+                                    tilt_port=config.TILT_PORT,
+                                    pan_min=config.PAN_MIN,
+                                    pan_max=config.PAN_MAX,
+                                    tilt_min=config.TILT_MIN,
+                                    tilt_max=config.TILT_MAX)
         self._distance_sensor = DistanceSensor(trig=config.DIST_SENSOR_TRIG,
                                                echo=config.DIST_SENSOR_ECHO)
 
@@ -50,6 +57,14 @@ class Car:
     def center(self):
         """Turn center."""
         self._wheel.center()
+
+    def pan(self, position):
+        """Pan the periscope to a position (0-4)."""
+        self._periscope.pan(int(position))
+
+    def tilt(self, position):
+        """Tilt the periscope to a position (0-4)."""
+        self._periscope.tilt(int(position))
     
     def get_distance(self):
         """Get distance from the sensor."""

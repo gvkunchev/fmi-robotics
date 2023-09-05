@@ -24,3 +24,13 @@ WHEEL_MAX = 120
 # Distance sensor pins on the Pi
 DIST_SENSOR_TRIG = 14
 DIST_SENSOR_ECHO = 15
+
+# Periscope tilt port and min/max angles
+TILT_PORT = 1
+TILT_MIN = 20
+TILT_MAX = 180
+
+# Periscope pan port and min/max angles
+PAN_PORT = 2
+PAN_MIN = 20
+PAN_MAX = 180

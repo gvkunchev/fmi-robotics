@@ -49,6 +49,17 @@ $(document).ready(function(){
     });
 
 
+    // Handle periscope pan
+    $('.pan-button').mousedown(function(){
+        send_command('pan', $(this).data('position'));
+    });
+
+    // Handle periscope tilt
+    $('.tilt-button').mousedown(function(){
+        send_command('tilt', $(this).data('position'));
+    });
+
+
     // Trigger control events on keydowns
     $(window).keydown(function(event){
         if (event.originalEvent.repeat){

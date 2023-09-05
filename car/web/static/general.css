@@ -10,6 +10,65 @@ body {
 #video {
     text-align: center;
     margin: 10px auto;
+    position: relative;
+    width: 640px;
+    height: 480px;
+}
+
+.pan-button, .tilt-button {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+}
+
+#pan_button_0 {
+    left: 40px;
+    bottom: 10px;
+}
+
+#pan_button_1 {
+    left: 70px;
+    bottom: 10px;
+}
+
+#pan_button_2 {
+    left: 100px;
+    bottom: 10px;
+}
+
+#pan_button_3 {
+    left: 130px;
+    bottom: 10px;
+}
+
+#pan_button_4 {
+    left: 160px;
+    bottom: 10px;
+}
+
+#tilt_button_0 {
+    left: 10px;
+    bottom: 40px;
+}
+
+#tilt_button_1 {
+    left: 10px;
+    bottom: 70px;
+}
+
+#tilt_button_2 {
+    left: 10px;
+    bottom: 100px;
+}
+
+#tilt_button_3 {
+    left: 10px;
+    bottom: 130px;
+}
+
+#tilt_button_4 {
+    left: 10px;
+    bottom: 160px;
 }
 
 #video img {
